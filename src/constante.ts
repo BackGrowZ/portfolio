@@ -1,8 +1,8 @@
-interface IItems {
+interface IDateExperience {
   title: string;
 }
 
-export interface IData {
+export interface IMissionDescription {
   poste?: string;
   contrat?: string;
   entreprise?: string;
@@ -13,7 +13,7 @@ export interface IData {
   techno: string;
 }
 
-export const items: IItems[] = [
+export const dateExperience: IDateExperience[] = [
   { title: "Janvier 2022" },
   { title: "Septembre 2021" },
   { title: "Octobre 2020" },
@@ -21,7 +21,7 @@ export const items: IItems[] = [
   { title: "Janvier 2020" },
 ];
 
-export const data: IData[] = [
+export const missionDescription: IMissionDescription[] = [
   {
     presentation:
       "Créer en décembre 2019, Coding Accelerator est un programme d'accompagnement en ligne pour devenir développeur indépendant. Il a déjà permis d'accompagner plusieurs centaines de personnes.",
@@ -39,7 +39,7 @@ export const data: IData[] = [
     techno: "React, TypeScript, Redux, Firebase, Git, HTML5, CSS3",
     poste: "Developpeur Web",
     contrat: "Freelance",
-    entreprise: "Censored",
+    entreprise: "Private",
     date: "Septembre 2021 à Décembre 2021",
     lieu: "Nantes",
   },
@@ -84,7 +84,7 @@ export const data: IData[] = [
     techno: "React, TypeScript, Redux, Firebase, Git, HTML, CSS",
     poste: "Developpeur Web",
     contrat: "Freelance",
-    entreprise: "Censored",
+    entreprise: "Private",
     date: "Janvier 2020 à Mai 2020",
     lieu: "Lille",
   },
@@ -130,3 +130,61 @@ export const socialData: ISocialData[] = [
 ];
 
 export const URLCalendly = "https://calendly.com/anthony-carreta/30min";
+
+export interface ICardFlip {
+  general?: {
+    direction?: "horizontal" | "vertical";
+    color?: string;
+  };
+  front: {
+    title: string;
+    images: string;
+  };
+  back: {
+    finish: boolean;
+    annee: number;
+    techno: string | string[];
+    link?: string;
+    github?: string;
+  };
+}
+
+export const cardFlipData: ICardFlip[] = [
+  {
+    front: {
+      title: "Jeu d'échec",
+      images: "https://i.stack.imgur.com/O8z60.png",
+    },
+    back: {
+      finish: false,
+      annee: 2022,
+      techno: ["React", "CSS", "HTML"],
+      github: "https://github.com/BackGrowZ/echec",
+    },
+  },
+  {
+    front: {
+      title: "Sudoku solver",
+      images: "http://www.sudoku.com/img/post-images/1541158196-Sudoku-Board-1.jpg",
+    },
+    back: {
+      github: "https://github.com/BackGrowZ/Sudoku-Solver",
+      finish: false,
+      annee: 2021,
+      techno: ["React", "CSS", "HTML"],
+    },
+  },
+  {
+    front: {
+      title: "alania cosmetiques",
+      images:
+        "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.6435-9/79169796_104913414329198_4563090400503398400_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=z1xlSJMENm8AX_v1jRw&_nc_oc=AQnKzHu2xqUFMzbnNDjdzvqG1eXZTFWd4MaA0sOxZMmDE_0bMtacUfG1rnYubz9ACpE_7E-y43R4JFPD2m-iwp2M&_nc_ht=scontent-cdt1-1.xx&oh=00_AT8gCAY1uyP4FneliCTBVFzezNcUrRhvtQdkYhyoa1sgtQ&oe=6224E551",
+    },
+    back: {
+      link: "https://www.alania-cosmetiques.fr/",
+      finish: true,
+      annee: 2020,
+      techno: ["React", "API REST", "GIT", "HTML5", "CSS3", " WordPress", "TypeScript", "Redux"],
+    },
+  },
+];

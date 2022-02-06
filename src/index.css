@@ -34,6 +34,7 @@ code {
   padding: 50px 70px 70px;
   z-index: 1;
   border-radius: 20px;
+  box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 10%);
 }
 
 .cardContact > .containerElement {
@@ -76,4 +77,10 @@ code {
 a,
 a:visited {
   color: unset;
+}
+
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

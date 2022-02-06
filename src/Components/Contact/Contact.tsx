@@ -1,5 +1,5 @@
 import react from "react";
-import CardContact from "./CardContact";
+import CardContact from "./components/CardContact";
 
 const Contact = () => {
   const maps = (
@@ -12,9 +12,11 @@ const Contact = () => {
     />
   );
   return (
-    <div className="contact">
-      <CardContact />
-      {maps}
+    <div>
+      <div className="contact">
+        <CardContact />
+        {maps}
+      </div>
     </div>
   );
 };

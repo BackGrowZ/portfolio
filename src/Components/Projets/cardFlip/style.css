@@ -1,0 +1,37 @@
+.cardflipFront img {
+  max-width: 100%;
+  max-height: 90%;
+}
+
+.cardflipBack,
+.cardflipFront {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+}
+.cardflipBack {
+  text-align: left;
+}
+
+.containerBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerDetail {
+  height: 75%;
+}
+
+.btn-Site {
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
