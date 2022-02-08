@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGitAlt, faGithub, faLinkedin, faReact, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import { faGitAlt, faGithub, faLinkedin, faReact, faBootstrap, faWordpress, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
 import { faCalendar, faEyeSlash, faMap } from "@fortawesome/free-regular-svg-icons";
 import { faEnvelope, faLaptopCode, faLocationArrow, faPhoneAlt, faTasks } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -8,6 +8,15 @@ import { ReactElement } from "react";
 export const getIcon = (name: string): IconDefinition => {
   let icon = faLocationArrow;
   switch (name) {
+    case "faHtml5":
+      icon = faHtml5;
+      break;
+    case "faBootstrap":
+      icon = faBootstrap;
+      break;
+    case "faCss3":
+      icon = faCss3Alt;
+      break;
     case "faLocationArrow":
       icon = faLocationArrow;
       break;

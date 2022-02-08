@@ -16,7 +16,7 @@ const CardContact = (): ReactElement => {
 
   const cardContact = showContact && (
     <div className="cardContact">
-      <div className="title">Contact</div>
+      <h2 className="title">Contact</h2>
       <div className="containerElement">
         <ContactInfo />
         <div className="element">

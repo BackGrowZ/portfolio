@@ -29,7 +29,7 @@ code {
 .cardContact {
   position: absolute;
   background: #fff;
-  height: 150px;
+  height: 220px;
   width: 400px;
   padding: 50px 70px 70px;
   z-index: 1;
@@ -83,4 +83,28 @@ a:visited {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.skill {
+  display: flex;
+  width: 100%;
+}
+.softSkill,
+.hardSkill {
+  width: 50%;
+}
+
+.description-main {
+  height: "300px";
+}
+.description-title {
+  margin-top: 0;
+}
+
+.description-link {
+  color: blue;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin: 32px 0 0 0;
 }

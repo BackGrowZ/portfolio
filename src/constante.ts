@@ -3,6 +3,7 @@ interface IDateExperience {
 }
 
 export interface IMissionDescription {
+  id?: number;
   poste?: string;
   contrat?: string;
   entreprise?: string;
@@ -152,6 +153,18 @@ export interface ICardFlip {
 export const cardFlipData: ICardFlip[] = [
   {
     front: {
+      title: "Portfolio",
+      images: "https://i.stack.imgur.com/O8z60.png",
+    },
+    back: {
+      finish: true,
+      annee: 2022,
+      techno: ["React", "TypeScript", "CSS", "HTML"],
+      github: "https://github.com/BackGrowZ/portfolio",
+    },
+  },
+  {
+    front: {
       title: "Jeu d'échec",
       images: "https://i.stack.imgur.com/O8z60.png",
     },
@@ -176,7 +189,7 @@ export const cardFlipData: ICardFlip[] = [
   },
   {
     front: {
-      title: "alania cosmetiques",
+      title: "Alania Cosmetiques",
       images:
         "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.6435-9/79169796_104913414329198_4563090400503398400_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=z1xlSJMENm8AX_v1jRw&_nc_oc=AQnKzHu2xqUFMzbnNDjdzvqG1eXZTFWd4MaA0sOxZMmDE_0bMtacUfG1rnYubz9ACpE_7E-y43R4JFPD2m-iwp2M&_nc_ht=scontent-cdt1-1.xx&oh=00_AT8gCAY1uyP4FneliCTBVFzezNcUrRhvtQdkYhyoa1sgtQ&oe=6224E551",
     },
@@ -186,5 +199,119 @@ export const cardFlipData: ICardFlip[] = [
       annee: 2020,
       techno: ["React", "API REST", "GIT", "HTML5", "CSS3", " WordPress", "TypeScript", "Redux"],
     },
+  },
+];
+
+export const hardSkillData = [
+  {
+    name: "React",
+    pourcentage: 80,
+    icon: {
+      name: "faReact",
+      style: { fontSize: "3rem", color: "#61DBFB" },
+    },
+  },
+  {
+    name: "Redux",
+    pourcentage: 70,
+    logo: {
+      link: "https://cdn.worldvectorlogo.com/logos/redux.svg",
+      style: { width: 40, marginTop: -5, marginBottom: 5 },
+    },
+  },
+  {
+    name: "TypeScript",
+    pourcentage: 70,
+    logo: {
+      link: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+      style: { width: 40, marginTop: -5, marginBottom: 5 },
+    },
+  },
+  {
+    name: "HTML",
+    pourcentage: 100,
+    icon: {
+      name: "faHtml5",
+      style: { fontSize: "3rem", color: "#e34c26" },
+    },
+  },
+  {
+    name: "CSS/SASS",
+    pourcentage: 80,
+    icon: {
+      name: "faCss3",
+      style: { fontSize: "3rem", color: "#264de4" },
+    },
+  },
+  {
+    name: "Bootsrap",
+    pourcentage: 70,
+    icon: {
+      name: "faBootstrap",
+      style: { fontSize: "3rem", color: "#337ab7" },
+    },
+  },
+  {
+    name: "Wordpress",
+    pourcentage: 60,
+    icon: {
+      name: "faWordpress",
+      style: { fontSize: "3rem", color: "#21759b" },
+    },
+  },
+  {
+    name: "Git",
+    pourcentage: 60,
+    icon: {
+      name: "faGitAlt",
+      style: { fontSize: "3rem", color: "#f34f29" },
+    },
+  },
+  {
+    name: "Firebase",
+    pourcentage: 40,
+    logo: {
+      link: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+      style: { width: 40, marginTop: -5, marginBottom: 5 },
+    },
+  },
+];
+
+export const softSkillData = [
+  {
+    name: "Intelligence émotionnelle",
+    pourcentage: 120,
+  },
+  {
+    name: "Veille technologique",
+    pourcentage: 75,
+  },
+  {
+    name: "Travail d'équipe",
+    pourcentage: 90,
+  },
+  {
+    name: "Ouverture d'esprit",
+    pourcentage: 95,
+  },
+  {
+    name: "Résolution de problème",
+    pourcentage: 85,
+  },
+  {
+    name: "Esprit analytique",
+    pourcentage: 90,
+  },
+  {
+    name: "Adaptabilité",
+    pourcentage: 95,
+  },
+  {
+    name: "Communication",
+    pourcentage: 80,
+  },
+  {
+    name: "Résilience",
+    pourcentage: 80,
   },
 ];

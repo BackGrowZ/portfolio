@@ -1,5 +1,5 @@
 import { cardFlipData } from "../../constante";
-import CardFlip from "./cardFlip/cardFlip";
+import CardFlip from "./components/cardFlip";
 
 const Project = () => {
   return (
