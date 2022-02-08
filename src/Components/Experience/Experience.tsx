@@ -1,9 +1,24 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import { Chrono } from "react-chrono";
 import { dateExperience, missionDescription } from "../../constante";
 import Description from "./Components/Description";
 
 const Experience = (): ReactElement => {
+  const test = missionDescription.map((mission, i) => {
+    return (
+      <Description
+        key={i}
+        presentation={mission.presentation}
+        task={mission.task}
+        techno={mission.techno}
+        poste={mission.poste}
+        contrat={mission.contrat}
+        entreprise={mission.entreprise}
+        date={mission.date}
+        lieu={mission.lieu}
+      />
+    );
+  });
   return (
     <div style={{ width: "100%" }}>
       <Chrono
@@ -17,21 +32,7 @@ const Experience = (): ReactElement => {
         items={dateExperience}
         mode="VERTICAL_ALTERNATING"
       >
-        {missionDescription.map((mission, i) => {
-          return (
-            <Description
-              key={i}
-              presentation={mission.presentation}
-              task={mission.task}
-              techno={mission.techno}
-              poste={mission.poste}
-              contrat={mission.contrat}
-              entreprise={mission.entreprise}
-              date={mission.date}
-              lieu={mission.lieu}
-            />
-          );
-        })}
+        {test}
       </Chrono>
     </div>
   );

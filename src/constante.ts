@@ -3,7 +3,6 @@ interface IDateExperience {
 }
 
 export interface IMissionDescription {
-  id?: number;
   poste?: string;
   contrat?: string;
   entreprise?: string;

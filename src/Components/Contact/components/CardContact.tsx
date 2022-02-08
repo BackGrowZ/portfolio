@@ -14,25 +14,23 @@ const CardContact = (): ReactElement => {
 
   const onClickRDV = () => openPopupWidget({ url: URLCalendly });
 
-  const cardContact = showContact && (
-    <div className="cardContact">
-      <h2 className="title">Contact</h2>
-      <div className="containerElement">
-        <ContactInfo />
-        <div className="element">
-          <SocialIcon />
-        </div>
-      </div>
-      <div className="containerElement">
-        <ButtonCard style={{ background: "#409940" }} onClick={onClickRDV} icon="faCalendar" label="Prendre RDV" />
-        <ButtonCard onClick={() => setShowContact((e) => !e)} label="Voir la carte" icon="faMap" />
-      </div>
-    </div>
-  );
-
   const card = (
     <>
-      {cardContact}
+      {showContact && (
+        <div className="cardContact">
+          <h2 className="title">Contact</h2>
+          <div className="containerElement">
+            <ContactInfo />
+            <div className="element">
+              <SocialIcon />
+            </div>
+          </div>
+          <div className="containerElement">
+            <ButtonCard style={{ background: "#409940" }} onClick={onClickRDV} icon="faCalendar" label="Prendre RDV" />
+            <ButtonCard onClick={() => setShowContact((e) => !e)} label="Voir la carte" icon="faMap" />
+          </div>
+        </div>
+      )}
       {btnShowContact}
     </>
   );
