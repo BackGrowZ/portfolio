@@ -35,10 +35,10 @@ const Count = () => {
     },
   ];
 
-  const showCompteur = compteur.map((e) => {
+  const showCompteur = compteur.map((e, i) => {
     const countUp = typeof e.value === "string" ? e.value : <CountUp duration={3} end={e.value} />;
     return (
-      <div className="presentation-case-compteur">
+      <div key={i} className="presentation-case-compteur">
         <div className="label-compteur">{e.label}</div>
         <div className="value-compteur">{countUp}</div>
       </div>

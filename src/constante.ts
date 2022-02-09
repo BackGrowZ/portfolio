@@ -99,7 +99,7 @@ interface IContactData {
 export const contactData: IContactData[] = [
   {
     icon: "faLocationArrow",
-    label: "Dalby Nantes 44300",
+    label: "Moutonnerie - Nantes 44300",
   },
   {
     icon: "faPhoneAlt",
@@ -129,7 +129,7 @@ export const socialData: ISocialData[] = [
   },
 ];
 
-export const URLCalendly = "https://calendly.com/anthony-carreta/30min";
+export const URLCalendly: string = "https://calendly.com/anthony-carreta/30min";
 
 export interface ICardFlip {
   general?: {
@@ -201,7 +201,20 @@ export const cardFlipData: ICardFlip[] = [
   },
 ];
 
-export const hardSkillData = [
+export interface ISkillData {
+  name: string;
+  pourcentage: number;
+  icon?: {
+    name: string;
+    style?: object;
+  };
+  logo?: {
+    link: string;
+    style?: object;
+  };
+}
+
+export const hardSkillData: ISkillData[] = [
   {
     name: "React",
     pourcentage: 80,
@@ -276,7 +289,7 @@ export const hardSkillData = [
   },
 ];
 
-export const softSkillData = [
+export const softSkillData: ISkillData[] = [
   {
     name: "Intelligence émotionnelle",
     pourcentage: 120,
@@ -314,3 +327,5 @@ export const softSkillData = [
     pourcentage: 80,
   },
 ];
+
+export const menuItemList: string[] = ["Présentation", "Experience", "Labs", "Contact"];

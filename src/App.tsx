@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { PopupWidget } from "react-calendly";
 import "./App.css";
-import Contact from "./Components/Contact/Contact";
 import { URLCalendly } from "./constante";
-import Experience from "./Components/Experience/Experience";
-import Project from "./Components/Projets/Project";
-import Skill from "./Components/Skill/Skill";
-import Presentation from "./Components/Presentation/Presentation";
+
+import Menu from "./Components/Navigation/Menu";
+import Ecran from "./Container/Ecran";
+
+export enum Page {
+  PRESENTATION,
+  EXPERIENCE,
+  LABS,
+  CONTACT,
+}
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showEcran, setShowEcran] = useState(0);
+
   return (
     <div className="App">
-      {/* <Presentation /> */}
-      {/* <Experience /> */}
-      {/* <Skill /> */}
-      {/* <Project /> */}
-      <Contact />
+      <Menu open={menuOpen} setShowEcran={setShowEcran} showEcran={showEcran} setOpen={() => setMenuOpen((e) => !e)} />
+      {!menuOpen && <Ecran idEcran={showEcran} />}
       <PopupWidget color="#00a2ff" text="Prendre RDV" textColor="#ffffff" url={URLCalendly} />
     </div>
   );

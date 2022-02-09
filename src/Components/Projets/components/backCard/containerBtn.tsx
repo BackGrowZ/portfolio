@@ -4,17 +4,16 @@ interface ILocalProps {
 
 const VisiteSite = ({ link }: ILocalProps) => {
   const cursor = link ? { cursor: "pointer" } : { cursor: "not-allowed" };
+  const linkBalise = (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      Visiter le site
+    </a>
+  );
 
   return (
     <div className="containerBtn">
       <div style={cursor} className="btn-Site">
-        {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            Visiter le site
-          </a>
-        ) : (
-          "Indisponible"
-        )}
+        {link ? linkBalise : "Indisponible"}
       </div>
     </div>
   );

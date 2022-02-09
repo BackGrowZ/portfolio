@@ -21,9 +21,7 @@ const CardContact = (): ReactElement => {
           <h2 className="title">Contact</h2>
           <div className="containerElement">
             <ContactInfo />
-            <div className="element">
-              <SocialIcon />
-            </div>
+            <SocialIcon />
           </div>
           <div className="containerElement">
             <ButtonCard style={{ background: "#409940" }} onClick={onClickRDV} icon="faCalendar" label="Prendre RDV" />

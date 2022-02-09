@@ -25,10 +25,10 @@ const Pourcentage = ({ name, pourcent, icon, logo }: IPourcentage) => {
     }
   };
   return (
-    <div style={{ height: "100px", width: "100px", padding: "15px", margin: "15px" }}>
+    <div className="skill-Pourcentage">
       <CircularProgressbarWithChildren value={pourcent}>
         {image()}
-        <div style={{ fontSize: 12, marginTop: -2 }}>
+        <div className="skill-Pourcentage-data">
           <strong>{pourcent}%</strong>
         </div>
       </CircularProgressbarWithChildren>
