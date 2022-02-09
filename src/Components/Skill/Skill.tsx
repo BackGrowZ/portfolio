@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { hardSkillData, softSkillData } from "../../constante";
-import ShowSkill from "./showSkill";
+import ShowSkill from "./ShowSkill";
 
 const Skill = (): ReactElement => {
   return (
