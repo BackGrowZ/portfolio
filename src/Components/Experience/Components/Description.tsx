@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import react, { ReactElement, useState } from "react";
 import { IMissionDescription } from "../../../constante";
 import DescFooter from "./DescFooter";
 import ReadMore from "./ReadMore";

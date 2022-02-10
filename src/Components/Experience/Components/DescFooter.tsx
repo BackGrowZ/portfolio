@@ -1,3 +1,4 @@
+import react from "react";
 import Icon from "../../Icon";
 
 interface ILocalProps {

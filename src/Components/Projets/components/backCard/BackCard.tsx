@@ -1,3 +1,4 @@
+import react from "react";
 import { ICardFlip } from "../../../../constante";
 import VisiteSite from "./containerBtn";
 import ContainerDetail from "./ContainerDetail";

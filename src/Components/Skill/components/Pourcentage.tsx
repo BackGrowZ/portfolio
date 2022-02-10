@@ -1,6 +1,6 @@
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import Icon from "../Icon";
+import Icon from "../../Icon";
 
 interface IPourcentage {
   name: string;

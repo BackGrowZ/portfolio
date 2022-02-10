@@ -1,4 +1,4 @@
-import { ISkillData } from "../../constante";
+import { ISkillData } from "../../../constante";
 import Pourcentage from "./Pourcentage";
 
 interface ILocalProps {
@@ -11,9 +11,9 @@ export default function ShowSkill({ data, title }: ILocalProps) {
     <div className="detailSkill">
       <h3>{title}</h3>
       <div className="skill-Container">
-        {data.map((e, i) => {
-          return <Pourcentage key={`${e.name}-${i}`} name={e.name} pourcent={e.pourcentage} icon={e.icon} logo={e.logo} />;
-        })}
+        {data.map((e, i) => (
+          <Pourcentage key={`${e.name}-${i}`} name={e.name} pourcent={e.pourcentage} icon={e.icon} logo={e.logo} />
+        ))}
       </div>
     </div>
   );

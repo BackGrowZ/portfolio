@@ -8,10 +8,6 @@ import SocialIcon from "./SocialIcon";
 const CardContact = (): ReactElement => {
   const [showContact, setShowContact] = useState(true);
 
-  const btnShowContact = !showContact && (
-    <ButtonCard className="btnMasquerCarte" label="Voir les info" icon="faEyeSlash" onClick={() => setShowContact((e) => !e)} />
-  );
-
   const onClickRDV = () => openPopupWidget({ url: URLCalendly });
 
   const card = (
@@ -24,12 +20,12 @@ const CardContact = (): ReactElement => {
             <SocialIcon />
           </div>
           <div className="containerElement">
-            <ButtonCard style={{ background: "#409940" }} onClick={onClickRDV} icon="faCalendar" label="Prendre RDV" />
-            <ButtonCard onClick={() => setShowContact((e) => !e)} label="Voir la carte" icon="faMap" />
+            <ButtonCard show={showContact} style={{ background: "#409940" }} onClick={onClickRDV} icon="faCalendar" label="Prendre RDV" />
+            <ButtonCard show={showContact} onClick={() => setShowContact((e) => !e)} label="Voir la carte" icon="faMap" />
           </div>
         </div>
       )}
-      {btnShowContact}
+      <ButtonCard show={!showContact} className="btnMasquerCarte" label="Voir les info" icon="faEyeSlash" onClick={() => setShowContact((e) => !e)} />
     </>
   );
 

@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import react, { useEffect, useState } from "react";
 import { Page } from "../../App";
 import Icon from "../Icon";
+import { Direction } from "./BtnNavigation";
 
 interface ILocalProps {
   showEcran: number;
-  direction: "LEFT" | "RIGHT";
-  onClick: () => void;
+  direction: Direction;
+  onClick: (direction: Direction) => void;
 }
 
 const BtnEcran = ({ showEcran, direction, onClick }: ILocalProps) => {
@@ -15,13 +16,13 @@ const BtnEcran = ({ showEcran, direction, onClick }: ILocalProps) => {
     setIsHoover(false);
   }, [showEcran]);
 
-  const nbRef = direction === "RIGHT" ? 3 : 0;
-  const upOrDown = direction === "RIGHT" ? 1 : -1;
-  const ICON = direction === "RIGHT" ? "faAngleRight" : "faAngleLeft";
-  const CLASS = direction === "RIGHT" ? "nav-Right" : "nav-Left";
+  const nbRef = direction === Direction.RIGHT ? 3 : 0;
+  const upOrDown = direction === Direction.RIGHT ? 1 : -1;
+  const ICON = direction === Direction.RIGHT ? "faAngleRight" : "faAngleLeft";
+  const CLASS = direction === Direction.RIGHT ? "nav-Right" : "nav-Left";
   const Label = isHoover && <span className="nav-label">{Page[showEcran + upOrDown]}</span>;
   const iconAndLabel =
-    direction === "RIGHT" ? (
+    direction === Direction.RIGHT ? (
       <>
         {Label} <Icon icon={ICON} />
       </>
@@ -33,7 +34,7 @@ const BtnEcran = ({ showEcran, direction, onClick }: ILocalProps) => {
 
   if (showEcran !== nbRef) {
     return (
-      <div onMouseEnter={() => setIsHoover(true)} onMouseLeave={() => setIsHoover(false)} onClick={onClick} className={CLASS}>
+      <div onMouseEnter={() => setIsHoover(true)} onMouseLeave={() => setIsHoover(false)} onClick={() => onClick(direction)} className={CLASS}>
         {iconAndLabel}
       </div>
     );

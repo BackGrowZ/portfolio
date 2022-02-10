@@ -1,9 +1,8 @@
-import { Dispatch, SetStateAction } from "react";
+import react, { Dispatch, SetStateAction } from "react";
 import Icon from "../Icon";
 import BtnEcran from "./BtnEcran";
 
 export interface IBtnMenu {
-  open?: boolean;
   showEcran: number;
   setOpen: () => void;
   changeEcran: Dispatch<SetStateAction<number>>;
@@ -15,10 +14,10 @@ export enum Direction {
 }
 
 const BtnMenu = ({ setOpen, changeEcran, showEcran }: IBtnMenu) => {
-  const changementEcran = (direction: number) => {
-    if (showEcran < 3 && direction === Direction["RIGHT"]) {
+  const changementEcran = (direction: Direction) => {
+    if (showEcran < 3 && direction === Direction.RIGHT) {
       changeEcran((e) => e + 1);
-    } else if (showEcran > 0 && direction === Direction["LEFT"]) {
+    } else if (showEcran > 0 && direction === Direction.LEFT) {
       changeEcran((e) => e - 1);
     }
   };
@@ -28,8 +27,8 @@ const BtnMenu = ({ setOpen, changeEcran, showEcran }: IBtnMenu) => {
       <div onClick={setOpen} className="menu-Icon">
         <Icon icon="faBars" />
       </div>
-      <BtnEcran direction="LEFT" showEcran={showEcran} onClick={() => changementEcran(Direction["LEFT"])} />
-      <BtnEcran direction="RIGHT" showEcran={showEcran} onClick={() => changementEcran(Direction["RIGHT"])} />
+      <BtnEcran direction={Direction.LEFT} showEcran={showEcran} onClick={changementEcran} />
+      <BtnEcran direction={Direction.RIGHT} showEcran={showEcran} onClick={changementEcran} />
     </>
   );
 };

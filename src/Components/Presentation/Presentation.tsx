@@ -5,7 +5,7 @@ const Presentation = () => {
     <>
       <div className="presentation">
         <div>
-          <img className="presentation-img" src="https://tinyurl.com/33rx5ppk" />
+          <img className="presentation-img" alt="Anthony Carreta" src="https://tinyurl.com/33rx5ppk" />
         </div>
         <div className="presentation-texte">
           <h2>Qui suis je ?</h2>

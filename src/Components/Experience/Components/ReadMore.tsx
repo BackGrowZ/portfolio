@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import react from "react";
 
 interface ILocalProps {
   click: () => void;
